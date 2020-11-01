@@ -13,7 +13,7 @@ html {
 }
 
 * {
-    --select-color: red;
+    --select-color: magenta;
     --pointer-cursor: pointer;
 }
 
@@ -39,8 +39,8 @@ body > * {
 
 #grid {
     display: grid;
-    grid-template-rows: repeat(36, 1ch);
-    grid-template-columns: repeat(64, 1ch);
+    grid-template-rows: repeat(18, 1ch);
+    grid-template-columns: repeat(32, 1ch);
 }
 
 #grid > span {
@@ -58,6 +58,7 @@ body > * {
 }
 
 .palette-item {
+    box-sizing: content-box;
     border: 1px dotted gray;
     padding: 1px;
     cursor: var(--pointer-cursor);

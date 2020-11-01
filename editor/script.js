@@ -1,7 +1,9 @@
 "use strict";
 
-let width = 16*4;
-let height = 9*4;
+let width = 16*4; // 64
+let height = 9*4; // 36
+width /= 2;
+height /= 2;
 
 let grid = document.getElementById("grid");
 
