@@ -9,6 +9,7 @@ html {
     font-family: "IBM-BIOS";
     box-sizing: border;
     font-size: 8px;
+    line-height: 2ch;
 }
 
 * {
@@ -22,29 +23,36 @@ html {
     text-shadow: 1px 0px var(--fade) var(--color), 0px 1px var(--fade) var(--color), -1px 0px var(--fade) var(--color), 0px -1px var(--fade) var(--color);
 }
 
+h2 {
+    font-size: 8px;
+    color: rgb(0, 255, 255);
+    --color: rgba(0, 255, 255, 0.3);
+    --fade: 4px;
+    text-shadow: 1px 0px var(--fade) var(--color), 0px 1px var(--fade) var(--color), -1px 0px var(--fade) var(--color), 0px -1px var(--fade) var(--color);
+}
+
 body > * {
     border: 2px solid white;
     margin: 1rem;
     padding: 1rem;
 }
 
-div {
-    margin-top: 1em;
-    margin-bottom: 1em;
-}
-
 #grid {
     display: grid;
-    grid-template-rows: repeat(36, 1em);
-    grid-template-columns: repeat(64, 1em);
+    grid-template-rows: repeat(36, auto);
+    grid-template-columns: repeat(64, auto);
 }
 
 #grid > span {
+    box-sizing: content-box;
     border: 1px dotted #444;
+    cursor: var(--pointer-cursor);
     width: 1ch;
     height: 1ch;
-    margin: 0;
-    cursor: var(--pointer-cursor);
+}
+
+#grid.nogrid > span {
+    border: none;
 }
 
 .palette-item {
@@ -55,4 +63,8 @@ div {
 
 .palette-item.selected {
     border: 1px solid var(--select-color);
+}
+
+.toggle {
+    cursor: var(--pointer-cursor);
 }
