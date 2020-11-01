@@ -10,3 +10,20 @@ while (x < width * height) {
     
     x += 1;
 }
+
+let palette = document.getElementById("palette");
+
+for (span of palette.querySelectorAll("span")) {
+    span.classList.add("palette-item");
+}
+
+let paletteItems = document.querySelectorAll(".palette-item");
+
+for (item of paletteItems) {
+    item.addEventListener("click", event => {
+        for (item of paletteItems) {
+            item.classList.remove("selected");
+        }
+        event.target.classList.add("selected");
+    });
+}

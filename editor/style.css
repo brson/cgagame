@@ -11,6 +11,11 @@ html {
     font-size: 8px;
 }
 
+* {
+    --select-color: red;
+    --pointer-cursor: pointer;
+}
+
 html {
     --color: rgba(255, 255, 255, 0.3);
     --fade: 4px;
@@ -36,7 +41,18 @@ div {
 
 #grid > span {
     border: 1px dotted #444;
-    width: 1em;
-    height: 1em;
+    width: 1ch;
+    height: 1ch;
     margin: 0;
+    cursor: var(--pointer-cursor);
+}
+
+.palette-item {
+    border: 1px dotted gray;
+    padding: 1px;
+    cursor: var(--pointer-cursor);
+}
+
+.palette-item.selected {
+    border: 1px solid var(--select-color);
 }
