@@ -1,0 +1,36 @@
+@font-face {
+    font-family: "IBM-BIOS";
+    src: url("Web_IBM_BIOS.woff");
+}
+
+html {
+    background-color: black;
+    color: white;
+    font-family: "IBM-BIOS";
+    box-sizing: border;
+    font-size: 8px;
+}
+
+body > * {
+    border: 2px solid white;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+div {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+#grid {
+    display: grid;
+    grid-template-rows: repeat(36, 1em);
+    grid-template-columns: repeat(64, 1em);
+}
+
+#grid > span {
+    border: 1px solid white;
+    width: 1em;
+    height: 1em;
+    margin: 0;
+}
